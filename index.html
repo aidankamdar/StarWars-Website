@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Star Wars Chronological Guide & Deep Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="#home" class="nav-link" data-page="home">Star Wars Guide</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#timeline" class="nav-link" data-page="timeline">Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#rankings" class="nav-link" data-page="rankings">Rankings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#recommendations" class="nav-link" data-page="recommendations">Recommendations</a>
+                </li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="globalSearch" placeholder="Search Star Wars content..." class="form-control search-input">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Ultimate Star Wars Chronological Guide & Deep Analysis</h1>
+                    <p class="hero-description">Your comprehensive database for all Star Wars media with chronological ordering, quality rankings, and detailed analysis</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Major Eras</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Media Entries</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25,000+</span>
+                            <span class="stat-label">Years Covered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Cards -->
+            <div class="nav-cards-section">
+                <div class="container">
+                    <div class="nav-cards-grid">
+                        <div class="nav-card" data-page="timeline">
+                            <div class="nav-card-icon">📅</div>
+                            <h3>Interactive Timeline</h3>
+                            <p>Explore all 8 major eras from Dawn of the Jedi to Rise of First Order in chronological order</p>
+                            <button class="btn btn--primary">Explore Timeline</button>
+                        </div>
+                        <div class="nav-card" data-page="rankings">
+                            <div class="nav-card-icon">⭐</div>
+                            <h3>Quality Rankings</h3>
+                            <p>Discover the best Star Wars content organized by quality tiers from Masterpiece to Poor</p>
+                            <button class="btn btn--primary">View Rankings</button>
+                        </div>
+                        <div class="nav-card" data-page="recommendations">
+                            <div class="nav-card-icon">🎯</div>
+                            <h3>Viewing Recommendations</h3>
+                            <p>Get personalized viewing guides for first-time viewers, chronological order, or quality-focused</p>
+                            <button class="btn btn--primary">Get Recommendations</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Content -->
+            <div class="featured-section">
+                <div class="container">
+                    <h2>Featured Content</h2>
+                    <div class="featured-grid" id="featuredContent">
+                        <!-- Featured content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Page -->
+        <section id="timeline-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Interactive Timeline</h1>
+                    <p>Explore the complete Star Wars universe through 8 major chronological eras</p>
+                    
+                    <!-- Timeline Filters -->
+                    <div class="timeline-filters">
+                        <button class="btn btn--outline filter-btn active" data-filter="all">All Content</button>
+                        <button class="btn btn--outline filter-btn" data-filter="Film">Movies Only</button>
+                        <button class="btn btn--outline filter-btn" data-filter="TV Series">TV Shows</button>
+                        <button class="btn btn--outline filter-btn" data-filter="Novel">Books</button>
+                        <button class="btn btn--outline filter-btn" data-filter="masterpiece">Masterpiece Tier</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Chart -->
+                <div class="timeline-chart-container">
+                    <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/20e7e0f2b00c4c64b16ca90aa1a17b49/b3467818-7473-4e62-9512-4f8c9a3ce9b8/1fa5ec4e.png" alt="Star Wars Timeline Chart" class="timeline-chart">
+                </div>
+
+                <!-- Era Cards -->
+                <div class="timeline-content" id="timelineContent">
+                    <!-- Timeline era cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Rankings Page -->
+        <section id="rankings-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Quality Rankings</h1>
+                    <p>All Star Wars media organized by quality tiers and ratings</p>
+                    
+                    <!-- Rankings Chart -->
+                    <div class="rankings-chart-container">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/20e7e0f2b00c4c64b16ca90aa1a17b49/a30145cf-0946-4dd2-8d51-a5cd6a4c7f7c/dd6f28f9.png" alt="Star Wars Quality Rankings Chart" class="rankings-chart">
+                    </div>
+
+                    <!-- Sorting Controls -->
+                    <div class="sorting-controls">
+                        <label for="sortBy">Sort by:</label>
+                        <select id="sortBy" class="form-control">
+                            <option value="rating">Rating</option>
+                            <option value="title">Title</option>
+                            <option value="type">Type</option>
+                            <option value="year">Release Year</option>
+                        </select>
+                        <button class="btn btn--outline" id="sortOrder">⬇ Descending</button>
+                    </div>
+                </div>
+
+                <!-- Rankings Tiers -->
+                <div class="rankings-content" id="rankingsContent">
+                    <!-- Rankings content will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Page -->
+        <section id="recommendations-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Viewing Recommendations</h1>
+                    <p>Find the perfect viewing path for your Star Wars journey</p>
+                </div>
+
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <h3>First-Time Viewers</h3>
+                        <p class="recommendation-subtitle">Release Order</p>
+                        <p>Experience the story as it was originally told and discover the magic of Star Wars</p>
+                        <div class="recommendation-path" id="firstTimeOrder">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                        <div class="recommendation-note">
+                            <strong>Best for:</strong> New fans who want the authentic experience
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <h3>Chronological Order</h3>
+                        <p class="recommendation-subtitle">Timeline Order</p>
+                        <p>Experience the complete saga in story chronological order from beginning to end</p>
+                        <div class="recommendation-path" id="chronologicalOrder">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                        <div class="recommendation-note">
+                            <strong>Best for:</strong> Rewatching fans who know the story
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <h3>Quality-Focused</h3>
+                        <p class="recommendation-subtitle">Best First</p>
+                        <p>Start with the highest quality content and work your way through the best Star Wars has to offer</p>
+                        <div class="recommendation-path" id="qualityOrder">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                        <div class="recommendation-note">
+                            <strong>Best for:</strong> Viewers who want guaranteed quality experiences
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What You Can Skip -->
+                <div class="skip-guide">
+                    <h2>What You Can Skip (If Short on Time)</h2>
+                    <div class="skip-content" id="skipContent">
+                        <!-- Skip recommendations will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Content Detail Modal -->
+    <div class="modal hidden" id="contentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
