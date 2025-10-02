@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
                 <h2><a href="#home" class="nav-link" data-page="home">Star Wars Guide</a></h2>
@@ -28,7 +28,7 @@
                 </li>
             </ul>
             <div class="search-container">
-                <input type="text" id="globalSearch" placeholder="Search Star Wars content..." class="form-control search-input">
+                <input type="text" id="globalSearch" placeholder="Search Star Wars content..." class="form-control search-input" aria-label="Search Star Wars content">
             </div>
         </div>
     </nav>
@@ -40,47 +40,14 @@
         <section id="home-page" class="page active">
             <!-- Hero Section -->
             <div class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Ultimate Star Wars Chronological Guide & Deep Analysis</h1>
-                    <p class="hero-description">Your comprehensive database for all Star Wars media with chronological ordering, quality rankings, and detailed analysis</p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">8</span>
-                            <span class="stat-label">Major Eras</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">40+</span>
-                            <span class="stat-label">Media Entries</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">25,000+</span>
-                            <span class="stat-label">Years Covered</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation Cards -->
-            <div class="nav-cards-section">
-                <div class="container">
-                    <div class="nav-cards-grid">
-                        <div class="nav-card" data-page="timeline">
-                            <div class="nav-card-icon">📅</div>
-                            <h3>Interactive Timeline</h3>
-                            <p>Explore all 8 major eras from Dawn of the Jedi to Rise of First Order in chronological order</p>
-                            <button class="btn btn--primary">Explore Timeline</button>
-                        </div>
-                        <div class="nav-card" data-page="rankings">
-                            <div class="nav-card-icon">⭐</div>
-                            <h3>Quality Rankings</h3>
-                            <p>Discover the best Star Wars content organized by quality tiers from Masterpiece to Poor</p>
-                            <button class="btn btn--primary">View Rankings</button>
-                        </div>
-                        <div class="nav-card" data-page="recommendations">
-                            <div class="nav-card-icon">🎯</div>
-                            <h3>Viewing Recommendations</h3>
-                            <p>Get personalized viewing guides for first-time viewers, chronological order, or quality-focused</p>
-                            <button class="btn btn--primary">Get Recommendations</button>
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Star Wars Canon Guide</h1>
+                        <p class="hero-description">Explore the complete timeline of the galaxy far, far away</p>
+                        <div class="hero-quick-links" role="group" aria-label="Choose your Star Wars path">
+                            <button class="hero-quick-link" type="button" data-page="timeline">Timeline</button>
+                            <button class="hero-quick-link" type="button" data-page="rankings">Rankings</button>
+                            <button class="hero-quick-link" type="button" data-page="recommendations">Watch Guide</button>
                         </div>
                     </div>
                 </div>
